@@ -8,147 +8,172 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-<header class="bg-gray-800 text-white">
-    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div>
-            <img src="img/GameLogo.png" alt="Logo de la tienda" class="h-20">
-        </div>
-        <div>
-            <ul class="flex items-center space-x-4">
-                <li class="relative">
-                    <img src="img/cart.png" id="img-carrito" alt="Carrito" class="h-8">
-                    <div id="carrito" class="absolute right-0 mt-2 bg-white shadow-lg p-4 hidden">
-                        <table id="lista-carrito" class="w-full">
-                            <thead>
-                                <tr>
-                                    <th>Imagen</th>
-                                    <th>Nombre</th>
-                                    <th>Precio</th>
-                                    <th>Cantidad</th>
-                                    <th></th>
-                                </tr>
-                            </thead>
-                            <tbody></tbody>
-                        </table>
-                        <a href="#" id="vaciar-carrito" class="bg-red-500 text-white py-2 px-4 rounded mt-2 block text-center">Vaciar Carrito</a>
-                    </div>
-                </li>          
-        </div>
-    </div>
-</header>
-
-<div id="hero" class="bg-gray-100 py-12">
-    <div class="container mx-auto px-4">
-        <div class="flex justify-center">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold">¡Descubre tu próximo juego!</h2>
-                <p class="mt-2 text-gray-700">Ofertas en todos los juegos</p>
-                <form action="#" id="busqueda" method="post" class="mt-4">
-                    <input class="w-full p-2 border border-gray-300 rounded" type="text" placeholder="¿Qué videojuego estás buscando?" id="buscador">
-                    <input type="submit" id="submit-buscador" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded w-full" value="Buscar">
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="py-8 bg-white">
-    <div class="container mx-auto px-4">
-        <div class="grid grid-cols-3 gap-4">
-            <div class="p-4 border rounded-lg">
-                <p>Más de 10,000 Videojuegos <br>Explora las últimas novedades</p>
-            </div>
-            <div class="p-4 border rounded-lg">
-                <p>Ofertas Exclusivas <br>Ahorra en tus compras</p>
-            </div>
-            <div class="p-4 border rounded-lg">
-                <p>Compra y Juega Inmediatamente <br>Descargas directas</p>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div id="lista-juegos" class="container mx-auto px-4 py-8">
-    <h1 class="text-2xl font-bold mb-6">Videojuegos Disponibles</h1>
-    <div class="grid grid-cols-3 gap-4">
-        <!-- Card 1 -->
-        <div class="border rounded-lg overflow-hidden">
-            <img src="img/tlou2.jpeg" class="w-full h-48 object-cover" alt="Juego 1">
-            <div class="p-4">
-                <h4 class="text-lg font-semibold">The Last of Us Part II</h4>
-                <p>Desarrollador: Naughty Dog</p>
-                <p class="text-gray-600">$60 <span class="float-right text-red-500">$40</span></p>
-                <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center" data-id="1">Agregar Al Carrito</a>
-            </div>
-        </div>
-        <!-- Card 2 -->
-        <div class="border rounded-lg overflow-hidden">
-            <img src="img/codcoldwar.jpg" class="w-full h-48 object-cover" alt="Juego 2">
-            <div class="p-4">
-                <h4 class="text-lg font-semibold">Call of Duty Black Ops Cold War</h4>
-                <p>Desarrollador: Activision</p>
-                <p class="text-gray-600">$60 <span class="float-right text-red-500">$45</span></p>
-                <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center" data-id="2">Agregar Al Carrito</a>
-            </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="border rounded-lg overflow-hidden">
-            <img src="img/heavyrain.jpg" class="w-full h-48 object-cover" alt="Juego 3">
-            <div class="p-4">
-                <h4 class="text-lg font-semibold">Heavy Rain</h4>
-                <p>Desarrollador: Quantic Dream</p>
-                <p class="text-gray-600">$60 <span class="float-right text-red-500">$50</span></p>
-                <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center" data-id="3">Agregar Al Carrito</a>
-            </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="border rounded-lg overflow-hidden">
-            <img src="img/gtasan.jpg" class="w-full h-48 object-cover" alt="Juego 4">
-            <div class="p-4">
-                <h4 class="text-lg font-semibold">Grand Theft Auto: San Andreas</h4>
-                <p>Desarrollador: Rockstar Games</p>
-                <p class="text-gray-600">$60 <span class="float-right text-red-500">$30</span></p>
-                <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center" data-id="4">Agregar Al Carrito</a>
-            </div>
-        </div>
-        <!-- Card 5 -->
-        <div class="border rounded-lg overflow-hidden">
-            <img src="img/assassin-s.jpg" class="w-full h-48 object-cover" alt="Juego 5">
-            <div class="p-4">
-                <h4 class="text-lg font-semibold">Assassin's Creed Valhalla</h4>
-                <p>Desarrollador: Ubisoft</p>
-                <p class="text-gray-600">$60 <span class="float-right text-red-500">$50</span></p>
-                <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center" data-id="5">Agregar Al Carrito</a>
-            </div>
-        </div>
-        <!-- Card 6 -->
-        <div class="border rounded-lg overflow-hidden">
-            <img src="img/metro.jpg" class="w-full h-48 object-cover" alt="Juego 6">
-            <div class="p-4">
-                <h4 class="text-lg font-semibold">Metro Exodus</h4>
-                <p>Desarrollador: 4A Games</p>
-                <p class="text-gray-600">$60 <span class="float-right text-red-500">$40</span></p>
-                <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center" data-id="6">Agregar Al Carrito</a>
-            </div>
-        </div>
-    </div>
-</div>  
-
-<footer class="bg-gray-800 text-white">
-    <div class="container mx-auto px-4 py-4">
-        <div class="grid grid-cols-2 gap-4">
+    <header class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div>
-                <nav id="principal" class="menu">
-                    <a class="block py-1" href="#">Términos y Condiciones</a>
-                    <a class="block py-1" href="#">Conviértete en Revendedor</a>
-                    <a class="block py-1" href="#">Soporte Técnico</a>
-                </nav>
+                <img src="img/GameLogo.png" alt="Logo de la tienda" class="h-20">
+            </div>
+            <button id="btn-carrito" class="absolute top-9 right-12 p-0 bg-transparent border-none cursor-pointer">
+                <img src="img/cart.png" alt="Carrito" class="w-8 h-8" />
+              </button>
+            <!-- Modal del Carrito -->
+            <div id="modal-carrito" class="fixed inset-0 hidden bg-black bg-opacity-50 flex items-center justify-center">
+                <div class="bg-white p-8 rounded-lg shadow-lg w-11/12 max-w-3xl">
+                  <h2 class="text-2xl mb-4">Carrito de Compras</h2>
+                  <table class="table-auto w-full">
+                    <thead>
+                        <tr class="bg-gray-200 text-gray-700">
+                            <th class="px-4 py-2">Producto</th>
+                            <th class="px-4 py-2">Nombre</th>
+                            <th class="px-4 py-2">Precio</th>
+                            <th class="px-4 py-2">Cantidad</th>
+                            <th class="px-4 py-2">Total</th>
+                            <th class="px-4 py-2">Eliminar</th>
+                        </tr>
+                    </thead>
+                    <tbody id="carrito-body" class="text-black">
+                      <!-- Los productos añadidos aparecerán aquí -->
+                    </tbody>
+                  </table>
+                  <div class="flex justify-between my-4">
+                        <p id="total-general" class="text-xl font-semibold">Total: $0</p>
+                        <button id="vaciar-carrito" class="bg-red-600 text-white px-4 py-2 rounded">Vaciar Carrito</button>
+                  </div>
+                  <button id="cerrar-modal" class="mt-4 bg-gray-600 text-white px-4 py-2 rounded">Cerrar</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="hero" class="bg-gray-100 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center">
+                <div class="text-center">
+                    <h2 class="text-3xl font-bold">¡Descubre tu próximo juego!</h2>
+                    <p class="mt-2 text-gray-700">Ofertas en todos los juegos</p>
+                    <form action="#" method="post" class="mt-4">
+                        <input class="w-full p-2 border border-gray-300 rounded" type="text" placeholder="¿Qué videojuego estás buscando?" id="buscador">
+                        <input type="submit" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded w-full" value="Buscar">
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</footer>
 
-<script src="js/app.js"></script>
+    <div class="py-8 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="p-4 border rounded-lg">
+                    <p>Más de 10,000 Videojuegos <br>Explora las últimas novedades</p>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <p>Ofertas Exclusivas <br>Ahorra en tus compras</p>
+                </div>
+                <div class="p-4 border rounded-lg">
+                    <p>Compra y Juega Inmediatamente <br>Descargas directas</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="lista-juegos" class="container mx-auto px-4 py-8">
+        <h1 class="text-2xl font-bold mb-6">Videojuegos Disponibles</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <!-- Card 1: The Last of Us Part II -->
+            <div class="border rounded-lg overflow-hidden">
+                <img src="img/tlou2.jpeg" class="w-full h-48 object-cover" alt="The Last of Us Part II">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">The Last of Us Part II</h4>
+                    <p>Desarrollador: Naughty Dog</p>
+                    <p class="text-gray-600">$60 <span class="float-right text-red-500">$40</span></p>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center agregar-carrito" 
+                       data-id="1" data-nombre="The Last of Us Part II" data-precio="40" data-img="img/tlou2.jpeg">
+                       Agregar Al Carrito
+                    </a>
+                </div>
+            </div>
+            <!-- Card 2: Call of Duty Black Ops Cold War -->
+            <div class="border rounded-lg overflow-hidden">
+                <img src="img/codcoldwar.jpg" class="w-full h-48 object-cover" alt="Call of Duty Black Ops Cold War">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">Call of Duty Black Ops Cold War</h4>
+                    <p>Desarrollador: Activision</p>
+                    <p class="text-gray-600">$60 <span class="float-right text-red-500">$45</span></p>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center agregar-carrito" 
+                       data-id="2" data-nombre="Call of Duty Black Ops Cold War" data-precio="45" data-img="img/codcoldwar.jpg">
+                       Agregar Al Carrito
+                    </a>
+                </div>
+            </div>
+            <!-- Card 3: Heavy Rain -->
+            <div class="border rounded-lg overflow-hidden">
+                <img src="img/heavyrain.jpg" class="w-full h-48 object-cover" alt="Heavy Rain">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">Heavy Rain</h4>
+                    <p>Desarrollador: Quantic Dream</p>
+                    <p class="text-gray-600">$60 <span class="float-right text-red-500">$50</span></p>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center agregar-carrito" 
+                       data-id="3" data-nombre="Heavy Rain" data-precio="50" data-img="img/heavyrain.jpg">
+                       Agregar Al Carrito
+                    </a>
+                </div>
+            </div>
+            <!-- Card 4: Grand Theft Auto: San Andreas -->
+            <div class="border rounded-lg overflow-hidden">
+                <img src="img/gtasan.jpg" class="w-full h-48 object-cover" alt="Grand Theft Auto: San Andreas">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">Grand Theft Auto: San Andreas</h4>
+                    <p>Desarrollador: Rockstar Games</p>
+                    <p class="text-gray-600">$60 <span class="float-right text-red-500">$30</span></p>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center agregar-carrito" 
+                       data-id="4" data-nombre="Grand Theft Auto: San Andreas" data-precio="30" data-img="img/gtasan.jpg">
+                       Agregar Al Carrito
+                    </a>
+                </div>
+            </div>
+            <!-- Card 5: Assassin's Creed Valhalla -->
+            <div class="border rounded-lg overflow-hidden">
+                <img src="img/assassin-s.jpg" class="w-full h-48 object-cover" alt="Assassin's Creed Valhalla">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">Assassin's Creed Valhalla</h4>
+                    <p>Desarrollador: Ubisoft</p>
+                    <p class="text-gray-600">$60 <span class="float-right text-red-500">$50</span></p>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center agregar-carrito" 
+                       data-id="5" data-nombre="Assassin's Creed Valhalla" data-precio="50" data-img="img/assassin-s.jpg">
+                       Agregar Al Carrito
+                    </a>
+                </div>
+            </div>
+            <!-- Card 6: Metro Exodus -->
+            <div class="border rounded-lg overflow-hidden">
+                <img src="img/metro.jpg" class="w-full h-48 object-cover" alt="Metro Exodus">
+                <div class="p-4">
+                    <h4 class="text-lg font-semibold">Metro Exodus</h4>
+                    <p>Desarrollador: 4A Games</p>
+                    <p class="text-gray-600">$60 <span class="float-right text-red-500">$40</span></p>
+                    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded mt-2 block text-center agregar-carrito" 
+                       data-id="6" data-nombre="Metro Exodus" data-precio="40" data-img="img/metro.jpg">
+                       Agregar Al Carrito
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>  
+
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-4 py-4">
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <nav id="principal" class="menu">
+                        <a class="block py-1" href="#">Términos y Condiciones</a>
+                        <a class="block py-1" href="#">Conviértete en Revendedor</a>
+                        <a class="block py-1" href="#">Soporte Técnico</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
 
 </body>
 </html>
