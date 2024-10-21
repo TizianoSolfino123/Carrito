@@ -8,10 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <header class="bg-gray-800 text-white">
+    <header class="bg-gray-800 text-white bg-cover bg-center h-32 mb-8" style="background-image: url('img/banner.jpg');">
         <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <div>
-                <img src="img/GameLogo.png" alt="Logo de la tienda" class="h-20">
+            <div class="container mx-auto px-4 flex justify-right items-center">
+                <img src="img/GameLogo.png" alt="Logo de la tienda" class="h-24">
             </div>
             <button id="btn-carrito" class="absolute top-9 right-12 p-0 bg-transparent border-none cursor-pointer">
                 <img src="img/cart.png" alt="Carrito" class="w-8 h-8" />
@@ -163,10 +163,8 @@
         <div class="container mx-auto px-4 py-4">
             <div class="grid grid-cols-2 gap-4">
                 <div>
-                    <nav id="principal" class="menu">
-                        <a class="block py-1" href="#">Términos y Condiciones</a>
-                        <a class="block py-1" href="#">Conviértete en Revendedor</a>
-                        <a class="block py-1" href="#">Soporte Técnico</a>
+                    <nav>
+                        <a class="block py-1" href="#">Tiziano Solfino</a>
                     </nav>
                 </div>
             </div>
